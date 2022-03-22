@@ -1,4 +1,5 @@
 @import '~normalize.css';
+@import './colors';
 
 @font-face {
   font-family: Roboto;
@@ -6,6 +7,14 @@
   font-weight: 300;
   src: local('Roboto'),
     url('./assets/fonts/Roboto/Roboto-Light.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 400;
+  src: local('Roboto'),
+    url('./assets/fonts/Roboto/Roboto-Regular.ttf') format('truetype');
 }
 
 @font-face {
@@ -24,10 +33,92 @@
     url('./assets/fonts/Roboto/Roboto-Bold.ttf') format('truetype');
 }
 
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(359deg);
+  }
+}
+
 * {
   box-sizing: border-box;
 }
 
 body {
   font-family: Roboto, Arial, sans-serif;
+}
+
+.visible-hidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(100%);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+.button {
+  background: linear-gradient(
+    90deg,
+    $primary-color 2.61%,
+    $primary-color-dark 112.6%
+  );
+  background-blend-mode: darken;
+  border-radius: 8px;
+  border-width: 0;
+  color: $button-color-default;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 21px;
+  padding: 13px;
+  position: relative;
+
+  &:hover,
+  &:focus {
+    background: $button-background-hover;
+  }
+
+  &:active {
+    background: $button-background-active;
+  }
+
+  &:disabled {
+    background: $button-background-disabled;
+  }
+
+  &_loading {
+    font-size: 0;
+
+    &::after {
+      animation: rotation 2s infinite linear;
+      background-image: url('./assets/img/icons/spinner.svg');
+      background-repeat: no-repeat;
+      background-size: cover;
+      content: '';
+      display: block;
+      height: 24px;
+      left: calc(50% - 12px);
+      position: absolute;
+      top: calc(50% - 12px);
+      width: 24px;
+    }
+  }
+
+  &_size {
+    &_medium {
+      min-width: 164px;
+    }
+
+    &_large {
+      min-width: 250px;
+    }
+  }
 }

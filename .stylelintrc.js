@@ -6,5 +6,6 @@ module.exports = {
   ],
   rules: {
     "declaration-block-no-duplicate-properties": true,
+    "max-nesting-depth": 6,
   }
 };
