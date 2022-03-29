@@ -12,13 +12,13 @@ export class AppComponent implements OnDestroy {
 
   slide = '1';
 
-  intervalId = setInterval(this.slider_click.bind(this), 5000, 'next', true);
+  intervalId = setInterval(this.sliderClick.bind(this), 5000, 'next', true);
 
-  menu_click() {
+  menuClick() {
     this.menu_show = !this.menu_show;
   }
 
-  slider_click(dir = 'next', auto = false) {
+  sliderClick(dir = 'next', auto = false) {
     if (auto !== true) {
       clearInterval(this.intervalId);
     }
