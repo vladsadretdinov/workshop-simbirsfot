@@ -1,0 +1,84 @@
+@import '../../../colors';
+
+.button {
+  background: linear-gradient(90deg,
+      $primary-color 2.61%,
+      $primary-color-dark 112.6%);
+  background-blend-mode: darken;
+  border-radius: 8px;
+  border-width: 0;
+  color: $button-color-default;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 21px;
+  padding: 13px;
+  position: relative;
+
+  &:hover,
+  &:focus {
+    background: $button-background-hover;
+  }
+
+  &:active {
+    background: $button-background-active;
+  }
+
+  &:disabled {
+    background: $button-background-disabled;
+  }
+
+  &_loading {
+    font-size: 0;
+
+    &::after {
+      animation: rotation 2s infinite linear;
+      background-image: url('../../../assets/img/icons/spinner.svg');
+      background-repeat: no-repeat;
+      background-size: cover;
+      content: '';
+      display: block;
+      height: 24px;
+      left: calc(50% - 12px);
+      position: absolute;
+      top: calc(50% - 12px);
+      width: 24px;
+    }
+  }
+
+  &_size {
+    &_medium {
+      min-width: 164px;
+    }
+
+    &_large {
+      min-width: 250px;
+    }
+  }
+
+  &_theme {
+    &_green {
+      background: linear-gradient(90deg, #13493f 0%, #0c7b1b 100%);
+      color: $gray-light-color;
+      border-radius: 4px;
+    }
+
+    &_turquoise {
+      background: linear-gradient(90deg, #132949 0%, #0c7b67 100%);
+      color: $gray-light-color;
+      border-radius: 4px;
+    }
+
+    &_red {
+      background: linear-gradient(90deg, #493013 0%, #7b0c3b 100%);
+      color: $gray-light-color;
+      border-radius: 4px;
+    }
+
+    &_purple {
+      background: linear-gradient(90deg, #281349 0%, #720c7b 100%);
+      color: $gray-light-color;
+      border-radius: 4px;
+    }
+  }
+}

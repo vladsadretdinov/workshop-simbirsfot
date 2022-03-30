@@ -218,26 +218,6 @@
     margin: 0 0 32px;
   }
 
-  &__button {
-    background: $slider-button-background;
-    border-radius: 4px;
-    color: $gray-light-color;
-
-    &_theme {
-      &_turquoise {
-        background: linear-gradient(90deg, #132949 0%, #0c7b67 100%);
-      }
-
-      &_red {
-        background: linear-gradient(90deg, #493013 0%, #7b0c3b 100%);
-      }
-
-      &_purple {
-        background: linear-gradient(90deg, #281349 0%, #720c7b 100%);
-      }
-    }
-  }
-
   &__page {
     align-items: center;
     cursor: pointer;
@@ -287,38 +267,38 @@
 }
 
 /* stylelint-disable selector-max-id */
-#product-1:checked ~ .slider {
+#product-1:checked~.slider {
   background-image: url('../assets/img/slider/1.jpg');
   background-position: center;
 }
 
-#product-2:checked ~ .slider {
+#product-2:checked~.slider {
   background-image: url('../assets/img/slider/2.png');
   background-position: left;
 }
 
-#product-3:checked ~ .slider {
+#product-3:checked~.slider {
   background-image: url('../assets/img/slider/3.png');
   background-position: left;
 }
 
-#product-4:checked ~ .slider {
+#product-4:checked~.slider {
   background-image: url('../assets/img/slider/4.png');
   background-position: center;
 }
 
-#product-1:checked ~ .slider #slide1,
-#product-2:checked ~ .slider #slide2,
-#product-3:checked ~ .slider #slide3,
-#product-4:checked ~ .slider #slide4 {
+#product-1:checked~.slider #slide1,
+#product-2:checked~.slider #slide2,
+#product-3:checked~.slider #slide3,
+#product-4:checked~.slider #slide4 {
   display: block;
 }
 
 /* stylelint-disable selector-class-pattern */
-#product-1:checked ~ .slider .slider__control-label[for='product-1'],
-#product-2:checked ~ .slider .slider__control-label[for='product-2'],
-#product-3:checked ~ .slider .slider__control-label[for='product-3'],
-#product-4:checked ~ .slider .slider__control-label[for='product-4'] {
+#product-1:checked~.slider .slider__control-label[for='product-1'],
+#product-2:checked~.slider .slider__control-label[for='product-2'],
+#product-3:checked~.slider .slider__control-label[for='product-3'],
+#product-4:checked~.slider .slider__control-label[for='product-4'] {
   background-color: $primary-color;
 }
 
@@ -522,7 +502,7 @@
       top: 16px;
       z-index: 1;
 
-      path {
+      use {
         stroke: $primary-black-color;
       }
     }
@@ -594,7 +574,8 @@
       margin: 16px 0 32px;
     }
 
-    &__button {
+    &__button ::ng-deep button {
+      width: 100%;
       border-radius: 0;
     }
   }

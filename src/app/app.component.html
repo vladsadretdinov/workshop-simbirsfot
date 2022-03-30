@@ -8,7 +8,7 @@
       height="32"
       viewBox="0 0 32 32"
     >
-      <use href="assets/img/icons/menu.svg#icon" />
+      <use href="assets/img/icons/menu.svg#icon" stroke="#ffffff"/>
     </svg>
     <span class="aside__language" tabindex="0"> Eng </span>
   </aside>
@@ -83,9 +83,9 @@
         <span class="main__subtitle"> Need for drive </span>
       </h1>
       <p class="main__description">Поминутная аренда авто твоего города</p>
-      <button class="button button_size_large main__button">
+      <app-button class="main__button" [size]="'large'">
         Забронировать
-      </button>
+      </app-button>
     </main>
 
     <footer class="footer">
@@ -164,9 +164,9 @@
           Оставляйте машину на платных городских парковках и разрешенных местах,
           не нарушая ПДД, а также в аэропортах.
         </p>
-        <button class="button button_size_medium slider__button">
+        <app-button [size]="'medium'" [theme]="'green'">
           Подробнее
-        </button>
+        </app-button>
       </li>
 
       <li class="slider__item" id="slide2">
@@ -174,11 +174,9 @@
         <p class="slider__description">
           Полная страховка страховка автомобиля.
         </p>
-        <button
-          class="button button_size_medium slider__button slider__button_theme_turquoise"
-        >
+        <app-button [size]="'medium'" [theme]="'turquoise'">
           Подробнее
-        </button>
+        </app-button>
       </li>
 
       <li class="slider__item" id="slide3">
@@ -186,21 +184,17 @@
         <p class="slider__description">
           Полный бак на любой заправке города за наш счёт.
         </p>
-        <button
-          class="button button_size_medium slider__button slider__button_theme_red"
-        >
+        <app-button [size]="'medium'" [theme]="'red'">
           Подробнее
-        </button>
+        </app-button>
       </li>
 
       <li class="slider__item" id="slide4">
         <h2 class="slider__title">Обслуживание</h2>
         <p class="slider__description">Автомобиль проходит еженедельное ТО.</p>
-        <button
-          class="button button_size_medium slider__button slider__button_theme_purple"
-        >
+        <app-button [size]="'medium'" [theme]="'purple'">
           Подробнее
-        </button>
+        </app-button>
       </li>
     </ul>
 
