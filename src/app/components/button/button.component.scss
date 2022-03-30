@@ -1,9 +1,11 @@
 @import '../../../colors';
 
 .button {
-  background: linear-gradient(90deg,
-      $primary-color 2.61%,
-      $primary-color-dark 112.6%);
+  background: linear-gradient(
+    90deg,
+    $primary-color 2.61%,
+    $primary-color-dark 112.6%
+  );
   background-blend-mode: darken;
   border-radius: 8px;
   border-width: 0;
@@ -59,26 +61,26 @@
   &_theme {
     &_green {
       background: linear-gradient(90deg, #13493f 0%, #0c7b1b 100%);
-      color: $gray-light-color;
       border-radius: 4px;
+      color: $gray-light-color;
     }
 
     &_turquoise {
       background: linear-gradient(90deg, #132949 0%, #0c7b67 100%);
-      color: $gray-light-color;
       border-radius: 4px;
+      color: $gray-light-color;
     }
 
     &_red {
       background: linear-gradient(90deg, #493013 0%, #7b0c3b 100%);
-      color: $gray-light-color;
       border-radius: 4px;
+      color: $gray-light-color;
     }
 
     &_purple {
       background: linear-gradient(90deg, #281349 0%, #720c7b 100%);
-      color: $gray-light-color;
       border-radius: 4px;
+      color: $gray-light-color;
     }
   }
 }

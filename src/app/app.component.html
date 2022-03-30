@@ -8,7 +8,7 @@
       height="32"
       viewBox="0 0 32 32"
     >
-      <use href="assets/img/icons/menu.svg#icon" stroke="#ffffff"/>
+      <use href="assets/img/icons/menu.svg#icon" stroke="#ffffff" />
     </svg>
     <span class="aside__language" tabindex="0"> Eng </span>
   </aside>
@@ -62,19 +62,7 @@
   </nav>
 
   <div class="container">
-    <header class="header">
-      <a href="#" class="header__logo"> Need for drive </a>
-      <div class="header__location">
-        <img
-          class="header__location-icon"
-          src="assets/img/icons/location.svg"
-          width="18"
-          height="20"
-          alt="Location icon"
-        />
-        <span class="header__location-name"> Ульяновск </span>
-      </div>
-    </header>
+    <app-header></app-header>
 
     <main class="main">
       <h1 class="main__title">
@@ -88,124 +76,8 @@
       </app-button>
     </main>
 
-    <footer class="footer">
-      <div class="footer__copyright">© 2016-2019 «Need for drive»</div>
-      <a href="tel:+84952342244" class="footer__contact"> 8 (495) 234-22-44 </a>
-    </footer>
+    <app-footer></app-footer>
   </div>
 
-  <input
-    class="visible-hidden"
-    type="radio"
-    id="product-1"
-    name="slide"
-    value="1"
-    [ngModel]="slide"
-    (click)="slide = '1'"
-  />
-  <input
-    class="visible-hidden"
-    type="radio"
-    id="product-2"
-    name="slide"
-    value="2"
-    [ngModel]="slide"
-    (click)="slide = '2'"
-  />
-  <input
-    class="visible-hidden"
-    type="radio"
-    id="product-3"
-    name="slide"
-    value="3"
-    [ngModel]="slide"
-    (click)="slide = '3'"
-  />
-  <input
-    class="visible-hidden"
-    type="radio"
-    id="product-4"
-    name="slide"
-    value="4"
-    [ngModel]="slide"
-    (click)="slide = '4'"
-  />
-
-  <section class="slider">
-    <div class="slider__page" (click)="sliderClick('prev')">
-      <img
-        class="slider__page-icon"
-        src="assets/img/icons/left_arrow.svg"
-        width="8"
-        height="18"
-        alt="Slider page left icon"
-      />
-    </div>
-
-    <div class="slider__controls">
-      <label class="slider__control-label" for="product-1" tabindex="0"
-        >Первый</label
-      >
-      <label class="slider__control-label" for="product-2" tabindex="0"
-        >Второй</label
-      >
-      <label class="slider__control-label" for="product-3" tabindex="0"
-        >Третий</label
-      >
-      <label class="slider__control-label" for="product-4" tabindex="0"
-        >Четвертый</label
-      >
-    </div>
-
-    <ul class="slider__content">
-      <li class="slider__item" id="slide1">
-        <h2 class="slider__title">Бесплатная парковка</h2>
-        <p class="slider__description">
-          Оставляйте машину на платных городских парковках и разрешенных местах,
-          не нарушая ПДД, а также в аэропортах.
-        </p>
-        <app-button [size]="'medium'" [theme]="'green'">
-          Подробнее
-        </app-button>
-      </li>
-
-      <li class="slider__item" id="slide2">
-        <h2 class="slider__title">Страховка</h2>
-        <p class="slider__description">
-          Полная страховка страховка автомобиля.
-        </p>
-        <app-button [size]="'medium'" [theme]="'turquoise'">
-          Подробнее
-        </app-button>
-      </li>
-
-      <li class="slider__item" id="slide3">
-        <h2 class="slider__title">Бензин</h2>
-        <p class="slider__description">
-          Полный бак на любой заправке города за наш счёт.
-        </p>
-        <app-button [size]="'medium'" [theme]="'red'">
-          Подробнее
-        </app-button>
-      </li>
-
-      <li class="slider__item" id="slide4">
-        <h2 class="slider__title">Обслуживание</h2>
-        <p class="slider__description">Автомобиль проходит еженедельное ТО.</p>
-        <app-button [size]="'medium'" [theme]="'purple'">
-          Подробнее
-        </app-button>
-      </li>
-    </ul>
-
-    <div class="slider__page" (click)="sliderClick('next')">
-      <img
-        class="slider__page-icon"
-        src="assets/img/icons/right_arrow.svg"
-        width="8"
-        height="18"
-        alt="Slider page right icon"
-      />
-    </div>
-  </section>
+  <app-slider></app-slider>
 </div>

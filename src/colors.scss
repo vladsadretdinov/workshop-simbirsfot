@@ -6,13 +6,17 @@ $gray-light-color: #eee;
 
 // ****** BUTTON ******
 $button-color-default: #fff;
-$button-background-default: linear-gradient(90deg,
+$button-background-default: linear-gradient(
+  90deg,
   $primary-color 2.61%,
-  $primary-color-dark 112.6%);
+  $primary-color-dark 112.6%
+);
 $button-background-hover: linear-gradient(90deg, #0b934a 2.61%, #026e47 112.6%);
-$button-background-active: linear-gradient(90deg,
+$button-background-active: linear-gradient(
+  90deg,
   #076432 2.61%,
-  #013c27 112.6%);
+  #013c27 112.6%
+);
 $button-background-disabled: #eee;
 
 // ***** ASIDE *****
@@ -22,9 +26,11 @@ $aside-language-hover-border-color: $gray-light-color;
 $aside-language-active-color: $primary-color;
 
 // ***** SLIDER ******
-$slider-shadow-background: linear-gradient(180deg,
+$slider-shadow-background: linear-gradient(
+  180deg,
   rgb(0 0 0 / 0%) 0%,
-  #000 100%);
+  #000 100%
+);
 $slider-title-color: #fff;
 
 // ***** NAV ******

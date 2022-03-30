@@ -1,4 +1,4 @@
-import { Component, Input, OnInit, HostBinding } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-button',
@@ -6,13 +6,12 @@ import { Component, Input, OnInit, HostBinding } from '@angular/core';
   styleUrls: ['./button.component.scss'],
 })
 export class ButtonComponent implements OnInit {
-  @Input('size') size: 'large' | 'medium' | undefined = undefined;
-  @Input('theme') theme: 'green' | 'turquoise' | 'red' | 'purple' | undefined = undefined;
+  @Input() size: 'large' | 'medium' | undefined = undefined;
 
-  classList: string = "";
+  @Input() theme: 'green' | 'turquoise' | 'red' | 'purple' | undefined =
+    undefined;
 
-  constructor() {
-  }
+  classList: string = '';
 
   ngOnInit(): void {
     if (this.size) {
@@ -22,5 +21,4 @@ export class ButtonComponent implements OnInit {
       this.classList += ` button_theme_${this.theme}`;
     }
   }
-
 }
