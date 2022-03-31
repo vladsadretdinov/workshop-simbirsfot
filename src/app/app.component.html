@@ -13,7 +13,7 @@
     <span class="aside__language" tabindex="0"> Eng </span>
   </aside>
 
-  <nav class="nav" [ngClass]="{ nav_closed: menu_show }">
+  <nav class="nav" [ngClass]="{ nav_closed: menuShow }">
     <aside class="aside">
       <img
         (click)="menuClick()"
@@ -71,9 +71,7 @@
         <span class="main__subtitle"> Need for drive </span>
       </h1>
       <p class="main__description">Поминутная аренда авто твоего города</p>
-      <app-button class="main__button" [size]="'large'">
-        Забронировать
-      </app-button>
+      <app-button class="main__button" size="large"> Забронировать </app-button>
     </main>
 
     <app-footer></app-footer>

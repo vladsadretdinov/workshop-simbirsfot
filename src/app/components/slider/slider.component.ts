@@ -1,4 +1,5 @@
 import { Component, OnDestroy } from '@angular/core';
+import { SLIDER_TIME_SWITCH } from './slider.const';
 
 @Component({
   selector: 'app-slider',
@@ -8,10 +9,15 @@ import { Component, OnDestroy } from '@angular/core';
 export class SliderComponent implements OnDestroy {
   slide = '1';
 
-  intervalId = setInterval(this.sliderClick.bind(this), 5000, 'next', true);
+  intervalId = setInterval(
+    this.sliderClick.bind(this),
+    SLIDER_TIME_SWITCH,
+    'next',
+    true,
+  );
 
   sliderClick(dir = 'next', auto = false) {
-    if (auto !== true) {
+    if (!auto) {
       clearInterval(this.intervalId);
     }
     if (dir === 'next') {

@@ -1,0 +1,3 @@
+const SLIDER_TIME_SWITCH = 5000;
+
+export { SLIDER_TIME_SWITCH };

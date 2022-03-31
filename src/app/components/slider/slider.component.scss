@@ -38,6 +38,7 @@
   }
 
   &__item {
+    min-height: 262px;
     display: none;
   }
 
@@ -63,6 +64,7 @@
     display: flex;
     flex: 1 0 64px;
     justify-content: center;
+    user-select: none;
     width: 64px;
     z-index: 1;
 

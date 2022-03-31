@@ -6,9 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
-  menu_show = true;
+  menuShow = true;
 
   menuClick() {
-    this.menu_show = !this.menu_show;
+    this.menuShow = !this.menuShow;
   }
 }
