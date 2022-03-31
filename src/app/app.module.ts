@@ -10,6 +10,8 @@ import { FormsModule } from '@angular/forms';
 import { SliderComponent } from './components/slider/slider.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { HeaderComponent } from './components/header/header.component';
+import { AsideComponent } from './components/aside/aside.component';
+import { NavComponent } from './components/nav/nav.component';
 
 @NgModule({
   declarations: [
@@ -17,6 +19,8 @@ import { HeaderComponent } from './components/header/header.component';
     SliderComponent,
     FooterComponent,
     HeaderComponent,
+    AsideComponent,
+    NavComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule, SharedModule],
   providers: [],

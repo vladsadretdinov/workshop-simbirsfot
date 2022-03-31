@@ -1,0 +1,24 @@
+<aside class="aside">
+  <svg
+    [ngClass]="{ aside__icon_checked: !menuShow }"
+    (click)="menuClick()"
+    class="aside__icon"
+    width="32"
+    height="32"
+    viewBox="0 0 32 32"
+  >
+    <use href="assets/img/icons/menu.svg#icon" stroke="#ffffff" />
+  </svg>
+  <svg
+    [ngClass]="{ aside__icon_checked: menuShow }"
+    (click)="menuClick()"
+    class="aside__icon"
+    width="32"
+    height="32"
+    viewBox="0 0 32 32"
+    id="close"
+  >
+    <use href="assets/img/icons/close.svg#icon" stroke="#ffffff" />
+  </svg>
+  <span class="aside__language" tabindex="0"> Eng </span>
+</aside>

@@ -1,0 +1,95 @@
+@import '../../../colors';
+
+.aside {
+  align-items: center;
+  background-color: $primary-black-color;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  justify-content: space-between;
+  overflow: hidden;
+  padding: 32px 16px;
+  width: 64px;
+
+  &__icon {
+    cursor: pointer;
+    display: none;
+    height: 32px;
+    width: 32px;
+
+    &_checked {
+      display: block;
+    }
+  }
+
+  &__language {
+    box-shadow: $aside-language-shadow;
+    color: $primary-color;
+    cursor: pointer;
+    font-size: 13px;
+    font-weight: 700;
+    line-height: 15px;
+    position: relative;
+
+    &:hover,
+    &:active {
+      color: $aside-language-hover-color;
+
+      &::before {
+        border: 1px solid $aside-language-hover-border-color;
+        border-radius: 50%;
+        content: '';
+        display: block;
+        height: 48px;
+        left: -13px;
+        position: absolute;
+        top: -16px;
+        width: 48px;
+      }
+    }
+
+    &:active {
+      color: $aside-language-active-color;
+    }
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .aside {
+    width: 85px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .aside {
+    background: transparent;
+    padding: 0;
+    width: 0;
+
+    &__icon {
+      left: 16px;
+      position: absolute;
+      top: 16px;
+      z-index: 1;
+
+      use {
+        stroke: $primary-black-color;
+      }
+
+      /* stylelint-disable selector-max-id */
+      &#close {
+        z-index: 10000;
+
+        use {
+          stroke: #fff;
+        }
+      }
+
+      /* stylelint-enable selector-max-id */
+    }
+
+    &__language {
+      display: none;
+    }
+  }
+}

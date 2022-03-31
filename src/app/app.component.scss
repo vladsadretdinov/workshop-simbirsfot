@@ -4,57 +4,16 @@
   display: flex;
 }
 
-// ***** ASIDE *****
-.aside {
-  align-items: center;
-  background-color: $primary-black-color;
+.container {
   display: flex;
+  flex: 0 1 50%;
   flex-direction: column;
   height: 100vh;
   justify-content: space-between;
-  overflow: hidden;
-  padding: 32px 16px;
-  width: 64px;
-
-  &__icon {
-    cursor: pointer;
-    height: 32px;
-    width: 32px;
-  }
-
-  &__language {
-    box-shadow: $aside-language-shadow;
-    color: $primary-color;
-    cursor: pointer;
-    font-size: 13px;
-    font-weight: 700;
-    line-height: 15px;
-    position: relative;
-
-    &:hover,
-    &:active {
-      color: $aside-language-hover-color;
-
-      &::before {
-        border: 1px solid $aside-language-hover-border-color;
-        border-radius: 50%;
-        content: '';
-        display: block;
-        height: 48px;
-        left: -13px;
-        position: absolute;
-        top: -16px;
-        width: 48px;
-      }
-    }
-
-    &:active {
-      color: $aside-language-active-color;
-    }
-  }
+  padding: 32px 64px;
+  width: 100%;
 }
 
-// ***** MAIN *****
 .main {
   &__title {
     color: $primary-black-color;
@@ -77,202 +36,29 @@
   }
 }
 
-.container {
+.content {
   display: flex;
-  flex: 0 1 calc(50% - 32px);
-  flex-direction: column;
-  height: 100vh;
-  justify-content: space-between;
-  padding: 32px 64px;
   width: 100%;
-}
-
-// ***** NAV *****
-.nav {
-  background-color: rgba($primary-black-color, 0.81);
-  display: flex;
-  height: 100vh;
-  position: absolute;
-  width: 100%;
-  z-index: 999;
-
-  &__container {
-    justify-content: center;
-    position: relative;
-
-    &::before {
-      background-color: $primary-black-color;
-      content: '';
-      height: 100%;
-      left: 0;
-      position: absolute;
-      top: 0;
-      width: 100%;
-      z-index: -1;
-    }
-  }
-
-  &__shadow {
-    flex: 0 1 calc(50% - 32px);
-    width: 100%;
-  }
-
-  &__icon {
-    cursor: pointer;
-    height: 32px;
-    left: 16px;
-    position: absolute;
-    top: 32px;
-    width: 32px;
-  }
-
-  &_closed {
-    display: none;
-  }
-
-  &__menu {
-    list-style-type: none;
-    margin: 0 0 38px;
-    padding: 0;
-  }
-
-  &__item {
-    margin-bottom: 15px;
-
-    &:last-child {
-      margin-bottom: 0;
-    }
-  }
-
-  &__link {
-    color: $nav-item-color;
-    font-size: 32px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: 38px;
-    text-decoration: none;
-
-    &:hover {
-      color: $primary-color;
-    }
-  }
-
-  &__social {
-    &-menu {
-      display: flex;
-      flex-direction: row;
-      list-style-type: none;
-      margin: 0;
-      padding: 0;
-    }
-
-    &-item {
-      margin-right: 24px;
-
-      &:last-child {
-        margin-right: 0;
-      }
-    }
-
-    &-link {
-      text-decoration: none;
-    }
-
-    &-icon {
-      height: 32px;
-      width: 32px;
-
-      &:hover use {
-        fill: $primary-color;
-      }
-    }
-  }
-
-  &__language {
-    display: none;
-  }
 }
 
 @media screen and (min-width: 1024px) and (max-width: 1440px) {
   .container {
-    flex: 1 0 calc(50% - 32px);
+    flex: 1 0 50%;
     min-width: 500px;
     padding: 32px;
-  }
-
-  .nav {
-    &__container {
-      flex: 1 0 calc(50% - 32px);
-      min-width: 500px;
-    }
-
-    &__shadow {
-      flex: 0 1 calc(45% - 32px);
-      min-width: 410px;
-    }
   }
 }
 
 @media screen and (min-width: 768px) and (max-width: 1023px) {
-  .aside {
-    width: 85px;
-  }
-
   .container {
-    flex: 1 1 calc(50% - 32px);
+    flex: 1 1 50%;
     padding: 32px;
-  }
-
-  .nav {
-    &__container {
-      flex: 1 1 calc(50% - 32px);
-      padding: 32px;
-    }
-
-    &__shadow {
-      display: none;
-    }
   }
 }
 
 @media screen and (max-width: 767px) {
-  .aside {
-    background: transparent;
-    padding: 0;
-    width: 0;
-
-    &__icon {
-      left: 16px;
-      position: absolute;
-      top: 16px;
-      z-index: 1;
-
-      use {
-        stroke: $primary-black-color;
-      }
-    }
-
-    &__language {
-      display: none;
-    }
-  }
-
-  .header {
-    align-items: flex-end;
-    flex-direction: column;
-    left: 0;
-    padding: 16px;
-    position: absolute;
-    text-align: right;
-    top: 0;
-
-    &__logo {
-      margin-bottom: 10px;
-    }
-  }
-
   .container {
-    flex: 1 1 calc(50% - 32px);
+    flex: 1 1 50%;
     padding: 0;
   }
 
@@ -301,30 +87,6 @@
     &__button ::ng-deep button {
       border-radius: 0;
       width: 100%;
-    }
-  }
-
-  .nav {
-    &__language {
-      bottom: 24px;
-      display: block;
-      left: 24px;
-      position: absolute;
-      z-index: 1;
-    }
-
-    &__shadow {
-      display: none;
-    }
-
-    &__container {
-      justify-content: flex-start;
-      padding: 80px 24px 0;
-    }
-
-    &__link {
-      font-size: 22px;
-      line-height: 26px;
     }
   }
 }

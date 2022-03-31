@@ -1,81 +1,30 @@
 <div class="app">
-  <aside class="aside">
-    <svg
-      (click)="menuClick()"
-      tabindex="0"
-      class="aside__icon"
-      width="32"
-      height="32"
-      viewBox="0 0 32 32"
-    >
-      <use href="assets/img/icons/menu.svg#icon" stroke="#ffffff" />
-    </svg>
-    <span class="aside__language" tabindex="0"> Eng </span>
-  </aside>
+  <app-aside
+    [menuShow]="menuShow"
+    (menuShowClick)="menuShow = $event"
+  ></app-aside>
 
-  <nav class="nav" [ngClass]="{ nav_closed: menuShow }">
-    <aside class="aside">
-      <img
-        (click)="menuClick()"
-        class="aside__icon"
-        src="assets/img/icons/close.svg"
-        width="32"
-        height="32"
-        alt="Menu icon"
-        tabindex="0"
-      />
-      <span class="aside__language nav__language" tabindex="0"> Eng </span>
-    </aside>
-    <div class="container nav__container">
-      <ul class="nav__menu">
-        <li class="nav__item">
-          <a class="nav__link" href="#"> ПАРКОВКА </a>
-        </li>
-        <li class="nav__item">
-          <a class="nav__link" href="#"> СТРАХОВКА </a>
-        </li>
-        <li class="nav__item">
-          <a class="nav__link" href="#"> БЕНЗИН </a>
-        </li>
-        <li class="nav__item">
-          <a class="nav__link" href="#"> ОБСЛУЖИВАНИЕ </a>
-        </li>
-      </ul>
-      <ul class="nav__social-menu">
-        <li class="nav__social-item">
-          <a class="nav__social-link" href="#">
-            <span class="visible-hidden">Telegram</span>
-            <svg
-              tabindex="0"
-              class="nav__social-icon"
-              width="32"
-              height="32"
-              viewBox="0 0 32 32"
-            >
-              <use href="assets/img/icons/telegram.svg#icon" fill="white" />
-            </svg>
-          </a>
-        </li>
-      </ul>
+  <app-nav [menuShow]="menuShow"></app-nav>
+
+  <div class="content">
+    <div class="container">
+      <app-header></app-header>
+
+      <main class="main">
+        <h1 class="main__title">
+          Каршеринг
+          <br />
+          <span class="main__subtitle"> Need for drive </span>
+        </h1>
+        <p class="main__description">Поминутная аренда авто твоего города</p>
+        <app-button class="main__button" size="large">
+          Забронировать
+        </app-button>
+      </main>
+
+      <app-footer></app-footer>
     </div>
-    <div class="nav__shadow"></div>
-  </nav>
 
-  <div class="container">
-    <app-header></app-header>
-
-    <main class="main">
-      <h1 class="main__title">
-        Каршеринг
-        <br />
-        <span class="main__subtitle"> Need for drive </span>
-      </h1>
-      <p class="main__description">Поминутная аренда авто твоего города</p>
-      <app-button class="main__button" size="large"> Забронировать </app-button>
-    </main>
-
-    <app-footer></app-footer>
+    <app-slider></app-slider>
   </div>
-
-  <app-slider></app-slider>
 </div>
