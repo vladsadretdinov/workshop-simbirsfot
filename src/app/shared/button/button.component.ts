@@ -5,6 +5,9 @@ import {
   ChangeDetectionStrategy,
 } from '@angular/core';
 
+export type Theme = 'default' | 'green' | 'turquoise' | 'red' | 'purple';
+type Size = 'large' | 'medium';
+
 @Component({
   selector: 'app-button',
   templateUrl: './button.component.html',
@@ -12,10 +15,9 @@ import {
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class ButtonComponent implements OnInit {
-  @Input() size: 'large' | 'medium' = 'medium';
+  @Input() size: Size = 'medium';
 
-  @Input() theme: 'default' | 'green' | 'turquoise' | 'red' | 'purple' =
-    'default';
+  @Input() theme: Theme = 'default';
 
   classList: string = '';
 
