@@ -1,0 +1,68 @@
+@import '../../../colors';
+
+.footer {
+  align-items: center;
+  display: flex;
+  font-size: 13px;
+  font-weight: 400;
+  justify-content: space-between;
+  line-height: 15px;
+  width: 100%;
+
+  &__copyright {
+    color: $gray-color;
+  }
+
+  &__contact {
+    color: $primary-black-color;
+    text-decoration: none;
+
+    &:hover,
+    &:active {
+      color: $primary-color;
+    }
+
+    &:disabled {
+      color: $gray-color;
+    }
+
+    &_theme {
+      &_white {
+        color: $gray-light-color;
+      }
+
+      &_green {
+        color: $primary-color;
+
+        &:hover,
+        &:active {
+          color: $gray-light-color;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .footer {
+    align-items: flex-end;
+    background-color: $primary-black-color;
+    display: flex;
+    flex-direction: column-reverse;
+    height: 72px;
+    padding: 16px;
+
+    &__copyright {
+      color: $gray-light-color;
+      font-size: 13px;
+      line-height: 15px;
+    }
+
+    &__contact {
+      color: $primary-color;
+      font-size: 13px;
+      line-height: 15px;
+      margin-bottom: 8px;
+    }
+  }
+}
