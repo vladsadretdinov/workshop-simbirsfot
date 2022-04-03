@@ -1,0 +1,14 @@
+<aside class="aside">
+  <svg
+    *ngFor="let icon of ['menu', 'close']"
+    class="aside__icon"
+    [ngClass]="{ aside__icon_checked: icon === 'menu' ? !menuShow : menuShow }"
+    (click)="menuClick()"
+    width="32"
+    height="32"
+    viewBox="0 0 32 32"
+    id="{{icon}}">
+    <use [attr.xlink:href]="'assets/img/icons/' + icon + '.svg#icon'" stroke="#ffffff" />
+  </svg>
+  <button type="button" class="aside__language" tabindex="0">Eng</button>
+</aside>
