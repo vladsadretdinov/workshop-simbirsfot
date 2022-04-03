@@ -74,6 +74,8 @@
 
   &__page {
     align-items: center;
+    background: transparent;
+    border: unset;
     cursor: pointer;
     display: flex;
     flex: 1 0 64px;

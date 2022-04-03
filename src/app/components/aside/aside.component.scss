@@ -23,13 +23,17 @@
   }
 
   &__language {
+    background: transparent;
+    border: unset;
     box-shadow: $aside-language-shadow;
     color: $primary-color;
     cursor: pointer;
     font-size: 13px;
     font-weight: 700;
     line-height: 15px;
+    padding: 0;
     position: relative;
+    user-select: none;
 
     &:hover,
     &:active {
@@ -53,6 +57,13 @@
     }
   }
 }
+
+/* stylelint-disable selector-max-id, selector-class-pattern */
+.aside__icon_checked#close ~ .aside__language {
+  display: none;
+}
+
+/* stylelint-enable selector-max-id, selector-class-pattern */
 
 @media screen and (min-width: 768px) and (max-width: 1023px) {
   .aside {
@@ -92,4 +103,15 @@
       display: none;
     }
   }
+
+  /* stylelint-disable selector-max-id, selector-class-pattern */
+  .aside__icon_checked#close ~ .aside__language {
+    bottom: 24px;
+    display: block;
+    left: 24px;
+    position: absolute;
+    z-index: 99999;
+  }
+
+  /* stylelint-enable selector-max-id, selector-class-pattern */
 }

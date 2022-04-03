@@ -1,11 +1,7 @@
-@import '../../../colors';
+@import '../../colors';
 
 .button {
-  background: linear-gradient(
-    90deg,
-    $primary-color 2.61%,
-    $primary-color-dark 112.6%
-  );
+  background: linear-gradient(90deg, $primary-color 2.61%, $primary-color-dark 112.6%);
   background-blend-mode: darken;
   border-radius: 8px;
   border-width: 0;
@@ -35,7 +31,7 @@
 
     &::after {
       animation: rotation 2s infinite linear;
-      background-image: url('../../../assets/img/icons/spinner.svg');
+      background-image: url('../../assets/img/icons/spinner.svg');
       background-repeat: no-repeat;
       background-size: cover;
       content: '';

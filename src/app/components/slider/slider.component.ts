@@ -11,18 +11,13 @@ export class SliderComponent implements OnDestroy {
 
   currentSlide = 0;
 
-  intervalId = setInterval(
-    this.sliderClick.bind(this),
-    SLIDER_TIME_SWITCH,
-    'next',
-    true,
-  );
+  intervalId = setInterval(this.sliderClick.bind(this), SLIDER_TIME_SWITCH, true, true);
 
-  sliderClick(dir = 'next', auto = false) {
+  sliderClick(next = true, auto = false) {
     if (!auto) {
       clearInterval(this.intervalId);
     }
-    if (dir === 'next') {
+    if (next) {
       const newValue = this.currentSlide + 1;
       this.currentSlide = newValue > SLIDES.length - 1 ? 0 : newValue;
       return;

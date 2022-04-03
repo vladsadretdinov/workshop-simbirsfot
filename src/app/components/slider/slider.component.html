@@ -1,13 +1,7 @@
 <section class="slider">
-  <div class="slider__page" (click)="sliderClick('prev')">
-    <img
-      class="slider__page-icon"
-      src="assets/img/icons/left_arrow.svg"
-      width="8"
-      height="18"
-      alt="Slider page left icon"
-    />
-  </div>
+  <button type="button" class="slider__page" (click)="sliderClick(false)">
+    <img class="slider__page-icon" src="assets/img/icons/left_arrow.svg" width="8" height="18" alt="Slider page left icon" />
+  </button>
 
   <div class="slider__controls">
     <input
@@ -17,15 +11,13 @@
       name="slide"
       value="{{ i }}"
       (click)="currentSlide = i"
-      *ngFor="let _ of slides; index as i"
-    />
+      *ngFor="let _ of slides; index as i" />
     <label
       class="slider__control-label"
       [ngClass]="{ 'slider__control-label_checked': i == currentSlide }"
       for="product-{{ i }}"
       tabindex="0"
-      *ngFor="let _ of slides; index as i"
-    >
+      *ngFor="let _ of slides; index as i">
       {{ i + 1 }} Слайд
     </label>
   </div>
@@ -35,29 +27,16 @@
       class="slider__item"
       [ngClass]="{ slider_checked: i == currentSlide }"
       id="slide{{ i + 1 }}"
-      *ngFor="let slide of slides; index as i"
-    >
+      *ngFor="let slide of slides; index as i">
       <div class="slider__shadow"></div>
-      <img
-        class="slider__background"
-        src="{{ slide.img.src }}"
-        alt="{{ slide.img.alt }}"
-      />
+      <img class="slider__background" src="{{ slide.img.src }}" alt="{{ slide.img.alt }}" />
       <h2 class="slider__title">{{ slide.title }}</h2>
       <p class="slider__description">{{ slide.text }}</p>
-      <app-button size="medium" [theme]="slide.buttonTheme">
-        Подробнее
-      </app-button>
+      <app-button size="medium" [theme]="slide.buttonTheme"> Подробнее </app-button>
     </li>
   </ul>
 
-  <div class="slider__page" (click)="sliderClick('next')">
-    <img
-      class="slider__page-icon"
-      src="assets/img/icons/right_arrow.svg"
-      width="8"
-      height="18"
-      alt="Slider page right icon"
-    />
-  </div>
+  <button type="button" class="slider__page" (click)="sliderClick()">
+    <img class="slider__page-icon" src="assets/img/icons/right_arrow.svg" width="8" height="18" alt="Slider page right icon" />
+  </button>
 </section>

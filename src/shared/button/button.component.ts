@@ -1,9 +1,4 @@
-import {
-  Component,
-  Input,
-  OnInit,
-  ChangeDetectionStrategy,
-} from '@angular/core';
+import { Component, Input, OnInit, ChangeDetectionStrategy } from '@angular/core';
 
 export type Theme = 'default' | 'green' | 'turquoise' | 'red' | 'purple';
 type Size = 'large' | 'medium';

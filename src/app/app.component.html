@@ -1,8 +1,5 @@
 <div class="app">
-  <app-aside
-    [menuShow]="menuShow"
-    (menuShowClick)="menuShow = $event"
-  ></app-aside>
+  <app-aside [menuShow]="menuShow" (menuShowClick)="menuShow = $event"></app-aside>
 
   <app-nav [menuShow]="menuShow"></app-nav>
 
@@ -17,9 +14,7 @@
           <span class="main__subtitle"> Need for drive </span>
         </h1>
         <p class="main__description">Поминутная аренда авто твоего города</p>
-        <app-button class="main__button" size="large">
-          Забронировать
-        </app-button>
+        <app-button class="main__button" size="large"> Забронировать </app-button>
       </main>
 
       <app-footer></app-footer>
