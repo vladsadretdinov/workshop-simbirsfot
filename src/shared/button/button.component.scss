@@ -24,6 +24,7 @@
 
   &:disabled {
     background: $button-background-disabled;
+    cursor: not-allowed;
   }
 
   &_loading {

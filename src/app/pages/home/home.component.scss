@@ -1,0 +1,92 @@
+@import '../../../colors';
+
+:host {
+  width: 100%;
+}
+
+.container {
+  display: flex;
+  flex: 0 1 50%;
+  flex-direction: column;
+  height: 100vh;
+  justify-content: space-between;
+  padding: 32px 64px;
+  width: 100%;
+}
+
+.main {
+  &__title {
+    color: $primary-black-color;
+    font-size: 70px;
+    font-weight: 700;
+    line-height: 66px;
+    margin: 0;
+  }
+
+  &__subtitle {
+    color: $primary-color;
+  }
+
+  &__description {
+    color: $gray-color;
+    font-size: 26px;
+    font-weight: 300;
+    line-height: 30px;
+    margin: 34px 0 60px;
+  }
+}
+
+.content {
+  display: flex;
+  width: 100%;
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1440px) {
+  .container {
+    flex: 1 0 50%;
+    min-width: 500px;
+    padding: 32px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .container {
+    flex: 1 1 50%;
+    padding: 32px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .container {
+    flex: 1 1 50%;
+    padding: 0;
+  }
+
+  .main {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: center;
+
+    &__title,
+    &__description {
+      padding: 0 16px;
+    }
+
+    &__title {
+      font-size: 32px;
+      line-height: 32px;
+    }
+
+    &__description {
+      font-size: 18px;
+      line-height: 21px;
+      margin: 16px 0 32px;
+    }
+
+    &__button ::ng-deep button {
+      border-radius: 0;
+      width: 100%;
+    }
+  }
+}
