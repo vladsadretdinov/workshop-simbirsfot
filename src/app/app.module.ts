@@ -4,11 +4,12 @@ import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 
-import { AppComponent } from './app.component';
-import { AppRoutingModule } from './app-routing.module';
-
 // Modules
 import { SharedModule } from './../modules/shared/shared.module';
+
+// Init..
+import { AppRoutingModule } from './app-routing.module';
+import { AppComponent } from './app.component';
 
 // Pages
 import { HomeComponent } from './pages/home/home.component';
@@ -31,4 +32,4 @@ import { CatchErrorInterceptor } from './interceptors/catch-error.interceptor';
   ],
   bootstrap: [AppComponent],
 })
-export class AppModule {}
+export class AppModule { }
