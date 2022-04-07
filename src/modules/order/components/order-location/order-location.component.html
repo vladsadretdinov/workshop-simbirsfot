@@ -1,0 +1,28 @@
+<main class="main">
+  <div class="main__text" for="city">
+    Город
+    <svg (click)="clearCityInput()" class="main__input-clear" tabindex="0" width="8" height="8" viewBox="0 0 8 8">
+      <use href="assets/img/icons/input-clear.svg#icon" />
+    </svg>
+    <input
+      #cityInput
+      (click)="cityClick()"
+      class="main__input"
+      type="text"
+      name="city"
+      id="city"
+      placeholder="Начните вводить город ..."
+      value="" />
+    <ul class="main__input-list" (click)="setCityInput($event)" #cityList>
+      <li class="main__input-list-item" value="{{item}}" title="{{item}}" *ngFor="let item of cities">
+        {{ item }}
+      </li>
+    </ul>
+  </div>
+  <p class="main__text" for="point">
+    Пункт выдачи
+    <input class="main__input" type="text" name="point" id="point" placeholder="Начните вводить пункт ..." value="" />
+  </p>
+  <p class="main__text main__text_align_left">Выбрать на карте:</p>
+  <img src="assets/map.png" width="736" height="352" style="max-width: 100%; height: auto" />
+</main>

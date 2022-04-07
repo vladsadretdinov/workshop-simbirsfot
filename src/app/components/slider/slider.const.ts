@@ -1,4 +1,4 @@
-import { Theme } from '../../../shared/button/button.component';
+import { Theme } from '../../../modules/shared/button/button.component';
 
 const SLIDER_TIME_SWITCH = 5000;
 

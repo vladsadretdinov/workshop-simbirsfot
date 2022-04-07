@@ -1,0 +1,119 @@
+@import '../../../../colors';
+
+.main {
+  align-items: self-start;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 32px 0;
+  padding-right: 32px;
+  width: 100%;
+
+  &__text {
+    align-items: center;
+    color: $primary-black-color;
+    display: flex;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 300;
+    justify-content: flex-end;
+    line-height: 16px;
+    margin: 0 0 16px;
+    min-width: 320px;
+    position: relative;
+
+    &_align {
+      &_left {
+        justify-content: flex-start;
+      }
+    }
+  }
+
+  &__input {
+    border: unset;
+    border-bottom: 1px solid $gray-color;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 16px;
+    margin-left: 5px;
+    max-width: 224px;
+    outline: none;
+    padding: 0 8px;
+    width: 100%;
+
+    ::placeholder {
+      color: $gray-color;
+    }
+  }
+
+  &__input-clear {
+    background: transparent;
+    border: unset;
+    bottom: 6px;
+    cursor: pointer;
+    height: 8px;
+    outline: none;
+    position: absolute;
+    right: 8px;
+    width: 8px;
+
+    // stylelint-disable selector-class-pattern
+    ~ .main__input {
+      padding-right: 24px;
+    }
+
+    // stylelint-enable selector-class-pattern
+  }
+
+  &__input-list {
+    background-color: #fff;
+    border: 1px solid $gray-light-color;
+    bottom: 0;
+    display: none;
+    list-style: none;
+    margin: 0;
+    max-height: 106px;
+    overflow-y: scroll;
+    padding: 9px;
+    position: absolute;
+    right: 0;
+    scrollbar-color: $gray-color $gray-light-color;
+    scrollbar-width: thin;
+    transform: translateY(100%);
+    width: calc(100% - 96px);
+    z-index: 1;
+
+    &_opened {
+      display: block;
+    }
+
+    &::-webkit-scrollbar {
+      background-color: #fff;
+      border-left: 1px solid $gray-light-color;
+      width: 4px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background-color: $gray-color;
+      border-radius: 2px;
+    }
+
+    &-item {
+      color: $primary-black-color;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 300;
+      padding-bottom: 6px;
+
+      &:hover {
+        color: $primary-color;
+        cursor: pointer;
+      }
+
+      &:last-child {
+        padding-bottom: 0;
+      }
+    }
+  }
+}
