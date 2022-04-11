@@ -1,0 +1,10 @@
+<main class="main">
+  <app-input-select
+    label="Город"
+    placeholder="Начните вводить город ..."
+    [options]="cityNames$ | async"
+    (valueChange)="citySelect($event)"></app-input-select>
+  <app-input-select label="Пункт выдачи" placeholder="Начните пункт выдачи ..." [options]="points$ | async"></app-input-select>
+  <p class="main__text">Выбрать на карте:</p>
+  <img class="main__map" src="assets/map.png" width="736" height="352" />
+</main>

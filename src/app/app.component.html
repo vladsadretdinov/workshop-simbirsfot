@@ -3,23 +3,5 @@
 
   <app-nav [menuShow]="menuShow"></app-nav>
 
-  <div class="content">
-    <div class="container">
-      <app-header></app-header>
-
-      <main class="main">
-        <h1 class="main__title">
-          Каршеринг
-          <br />
-          <span class="main__subtitle"> Need for drive </span>
-        </h1>
-        <p class="main__description">Поминутная аренда авто твоего города</p>
-        <app-button class="main__button" size="large"> Забронировать </app-button>
-      </main>
-
-      <app-footer></app-footer>
-    </div>
-
-    <app-slider></app-slider>
-  </div>
+  <router-outlet></router-outlet>
 </div>

@@ -1,0 +1,7 @@
+<div class="breadcrumbs__wrapper">
+  <ul class="breadcrumbs">
+    <li class="breadcrumbs__item" [ngClass]="{breadcrumbs__item_active: link.path}" *ngFor="let link of links">
+      {{ link.name }}
+    </li>
+  </ul>
+</div>

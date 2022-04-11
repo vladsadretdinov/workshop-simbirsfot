@@ -14,6 +14,8 @@ export class ButtonComponent implements OnInit {
 
   @Input() theme: Theme = 'default';
 
+  @Input() disabled: boolean = false;
+
   classList: string = '';
 
   ngOnInit(): void {

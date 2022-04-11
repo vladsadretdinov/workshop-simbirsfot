@@ -1,0 +1,16 @@
+<aside class="aside">
+  <h2 class="aside__title">Ваш заказ:</h2>
+  <ul class="aside__list">
+    <p class="aside__item">
+      <span class="aside__item-title"> Пункт выдачи </span>
+      <span class="aside__item-value">
+        {{ city$ | async }}
+      </span>
+    </p>
+  </ul>
+  <p class="aside__price">
+    Цена:
+    <span class="aside__price-value"> от 8 000 до 12 000 ₽ </span>
+  </p>
+  <app-button class="aside__button" [disabled]="true"> Выбрать модель </app-button>
+</aside>

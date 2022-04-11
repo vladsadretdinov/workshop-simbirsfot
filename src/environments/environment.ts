@@ -4,6 +4,8 @@
 
 export const environment = {
   production: false,
+  apiUrl: 'https://api-factory.simbirsoft1.com/api',
+  apiFactoryId: '5e25c641099b810b946c5d5b',
 };
 
 /*
