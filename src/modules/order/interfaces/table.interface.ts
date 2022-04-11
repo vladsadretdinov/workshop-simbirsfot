@@ -5,17 +5,27 @@ export interface IGet {
   sort?: [];
 }
 
-export interface IGetResponse {
-  fields: {
-    name: string;
-    type: string;
-    required: boolean;
-  };
+export interface ICityGetResponseItem {
+  updatedAt: number;
+  createdAt: number;
+  name: string;
+  id: string;
+}
+
+export interface ICityGetResponse {
+  count: number;
+  data: ICityGetResponseItem[];
+}
+
+export interface ICityPointsResponse {
   count: number;
   data: {
-    updatedAt: any;
-    createdAt: any;
     name: string;
+    cityId: {
+      name: string;
+      id: string;
+    };
+    address: string;
     id: string;
   }[];
 }

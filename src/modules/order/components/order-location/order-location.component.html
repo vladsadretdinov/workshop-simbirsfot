@@ -1,28 +1,10 @@
 <main class="main">
-  <div class="main__text" for="city">
-    Город
-    <svg (click)="clearCityInput()" class="main__input-clear" tabindex="0" width="8" height="8" viewBox="0 0 8 8">
-      <use href="assets/img/icons/input-clear.svg#icon" />
-    </svg>
-    <input
-      #cityInput
-      (click)="cityClick()"
-      class="main__input"
-      type="text"
-      name="city"
-      id="city"
-      placeholder="Начните вводить город ..."
-      value="" />
-    <ul class="main__input-list" (click)="setCityInput($event)" #cityList>
-      <li class="main__input-list-item" value="{{item}}" title="{{item}}" *ngFor="let item of cities">
-        {{ item }}
-      </li>
-    </ul>
-  </div>
-  <p class="main__text" for="point">
-    Пункт выдачи
-    <input class="main__input" type="text" name="point" id="point" placeholder="Начните вводить пункт ..." value="" />
-  </p>
-  <p class="main__text main__text_align_left">Выбрать на карте:</p>
-  <img src="assets/map.png" width="736" height="352" style="max-width: 100%; height: auto" />
+  <app-input-select
+    label="Город"
+    placeholder="Начните вводить город ..."
+    [options]="cityNames$ | async"
+    (valueChange)="citySelect($event)"></app-input-select>
+  <app-input-select label="Пункт выдачи" placeholder="Начните пункт выдачи ..." [options]="points$ | async"></app-input-select>
+  <p class="main__text">Выбрать на карте:</p>
+  <img class="main__map" src="assets/map.png" width="736" height="352" />
 </main>

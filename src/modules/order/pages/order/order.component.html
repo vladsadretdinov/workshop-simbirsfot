@@ -5,41 +5,5 @@
 <div class="container content">
   <router-outlet></router-outlet>
 
-  <aside class="aside">
-    <h2 class="aside__title">Ваш заказ:</h2>
-    <ul class="aside__list">
-      <p class="aside__item">
-        <span class="aside__item-title"> Пункт выдачи </span>
-        <span class="aside__item-value">
-          Ульяновск,<br />
-          Нариманова 42
-        </span>
-      </p>
-      <p class="aside__item">
-        <span class="aside__item-title"> Модель </span>
-        <span class="aside__item-value"> Hyndai, i30 N </span>
-      </p>
-      <p class="aside__item">
-        <span class="aside__item-title"> Цвет </span>
-        <span class="aside__item-value"> Голубой </span>
-      </p>
-      <p class="aside__item">
-        <span class="aside__item-title"> Длительность аренды </span>
-        <span class="aside__item-value"> 1д 2ч </span>
-      </p>
-      <p class="aside__item">
-        <span class="aside__item-title"> Тариф </span>
-        <span class="aside__item-value"> На сутки </span>
-      </p>
-      <p class="aside__item">
-        <span class="aside__item-title"> Полный бак </span>
-        <span class="aside__item-value"> Да </span>
-      </p>
-    </ul>
-    <p class="aside__price">
-      Цена:
-      <span class="aside__price-value"> от 8 000 до 12 000 ₽ </span>
-    </p>
-    <app-button class="aside__button" [disabled]="true"> Выбрать модель </app-button>
-  </aside>
+  <app-aside-price></app-aside-price>
 </div>

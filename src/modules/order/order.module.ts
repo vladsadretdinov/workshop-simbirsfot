@@ -11,12 +11,13 @@ import { SharedModule } from './../shared/shared.module';
 import { OrderComponent } from './pages/order/order.component';
 
 // Components
-import { BreadcrumbsComponent } from './../../app/components/breadcrumbs/breadcrumbs.component';
+import { BreadcrumbsComponent } from './components/breadcrumbs/breadcrumbs.component';
 import { OrderLocationComponent } from './components/order-location/order-location.component';
+import { AsidePriceComponent } from './components/aside-price/aside-price.component';
 
 @NgModule({
-  declarations: [BreadcrumbsComponent, OrderComponent, OrderLocationComponent],
+  declarations: [BreadcrumbsComponent, OrderComponent, OrderLocationComponent, AsidePriceComponent],
   imports: [SharedModule, CommonModule, OrderRoutingModule],
-  exports: [OrderComponent],
+  exports: [],
 })
 export class OrderModule {}

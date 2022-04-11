@@ -32,4 +32,4 @@ import { CatchErrorInterceptor } from './interceptors/catch-error.interceptor';
   ],
   bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

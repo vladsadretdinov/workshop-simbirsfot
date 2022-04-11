@@ -7,7 +7,7 @@ import { environment } from 'src/environments/environment';
 export class TokenInterceptor implements HttpInterceptor {
   intercept(request: HttpRequest<unknown>, next: HttpHandler): Observable<HttpEvent<unknown>> {
     const modifiedRequest = request.clone({
-      headers: request.headers.set('X-Api-Factory-Application-Id', environment['X-Api-Factory-Application-Id']),
+      headers: request.headers.set('X-Api-Factory-Application-Id', environment.apiFactoryId),
     });
     return next.handle(modifiedRequest);
   }

@@ -1,0 +1,23 @@
+<label class="input__label" for="{{id}}">
+  {{label}}
+</label>
+
+<div class="input__wrapper">
+  <input
+    (click)="clickInput()"
+    class="input"
+    type="text"
+    id="{{id}}"
+    [formControl]="inputControl"
+    autocomplete="off"
+    #input
+    placeholder="{{placeholder}}" />
+  <svg (click)="clearInput()" class="input__eraser" tabindex="0" width="8" height="8" viewBox="0 0 8 8" #input__eraser>
+    <use href="assets/img/icons/input-clear.svg#icon" />
+  </svg>
+  <ul class="input__list" (click)="setInput($event)" #input__list>
+    <li class="input__list-option" title="{{option}}" *ngFor="let option of renderedOptions">
+      {{ option }}
+    </li>
+  </ul>
+</div>
